@@ -272,6 +272,10 @@ header ul li a {
     background-color: #4e5a62;
     cursor: pointer;
 }
+#partners > div:hover .partner-info p {
+    color: #ffffff;
+    background-color: #3a454d;
+}
 #partners .social-links li a {
     display: block;
     text-indent: -100000px;
@@ -308,6 +312,7 @@ header ul li a {
     width: calc((100% - 90px) / 4);
     background-color: #e1e6ea;
     position: relative;
+    
 }
 #partners .partner-info {
     width: 100%;
@@ -323,11 +328,13 @@ header ul li a {
     padding-top: 21px;
     text-transform: uppercase;
     color: #292f36;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 #partners .partner-info p:nth-child(3) {
     font-size: 14px;
     color: #8d8f92;
     padding-bottom: 21px;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 #about > div > ul {
     margin-bottom: 100px;
@@ -354,7 +361,7 @@ header ul li a {
     
 }
 #works-list > div {
-    width: calc( (100% - 90px) / 3);
+    width: calc( (100% - 60px) / 3);
     position: relative;
     margin-bottom: 30px;
 }
@@ -421,7 +428,8 @@ header ul li a {
     flex-wrap: wrap;
 }
 #do > div {
-    width: calc( (100% - 90px) / 4 );
+    width: 262px;
+    margin-right: 30px;
     text-align: center;
     margin-bottom: 85px;
     padding-top: 83px;
@@ -440,38 +448,22 @@ header ul li a {
     line-height: 26px;
     color: #8d8f92;
 }
-#do > div:nth-child(1) {
+#do > div:nth-child(4n + 1) {
     background-image: url('./images/whatwedo/cogs.png');
     background-position: center top;
 }
-#do > div:nth-child(2) {
+#do > div:nth-child(4n + 2) {
     background-image: url('./images/whatwedo/pencil.png');
     background-position: center top;
 }
-#do > div:nth-child(3) {
+#do > div:nth-child(4n + 3) {
     background-image: url('./images/whatwedo/mobile.png');
     background-position: center top;
 }
-#do > div:nth-child(4) {
+#do > div:nth-child(4n + 4) {
     background-image: url('./images/whatwedo/clock.png');
     background-position: center top;
-}
-
-#do > div:nth-child(5) {
-    background-image: url('./images/whatwedo/cogs.png');
-    background-position: center top;
-}
-#do > div:nth-child(6) {
-    background-image: url('./images/whatwedo/pencil.png');
-    background-position: center top;
-}
-#do > div:nth-child(7) {
-    background-image: url('./images/whatwedo/mobile.png');
-    background-position: center top;
-}
-#do > div:nth-child(8) {
-    background-image: url('./images/whatwedo/clock.png');
-    background-position: center top;
+    margin-right: 0px;
 }
 
 /* Features */
@@ -646,6 +638,47 @@ footer .container ul li:nth-child(4) {
 footer .container ul li:nth-child(5) {
     background-image: url('./images/social/linkedin.png');
 }
+
+/* responsive */
+@media screen and (max-width: 1170px) {
+    #partners {
+        flex-wrap: wrap;
+    }
+    #partners > div {
+        width: calc( (100% - 30px) / 2);
+    }
+    #jumbotron .container {
+        min-height: 460px;
+    }
+    #jumbotron .info {
+        max-width: 100%;
+        margin: 0px auto;
+    }
+    #jumbotron .container .info p,
+    #jumbotron .container .info h2,
+    #jumbotron .container .info > div {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #about > div {
+        max-width: 50%;
+    }
+    #about > ul {
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 780px) {
+    #works-list > div {
+        width: calc( (100% - 30px) / 2);
+    }
+    #works-list {
+        flex-wrap: wrap;
+    }
+}
+    
+    
+
 
 
 
